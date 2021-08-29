@@ -1,16 +1,13 @@
 const inputValue = document.getElementById('inputValue').value;
 const loadData = () => {
-    console.log(inputValue)
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`)
         .then(response => response.json())
         .then(data => showSearchResults(data.meals))
 }
-// inputValue.value = '';
 
 const showSearchResults = (meals) => {
     const cardContainer = document.getElementById('card-addon');
     meals.forEach(item => {
-        console.log(item)
         const div = document.createElement('div');
         div.classList.add('col')
         div.innerHTML = " ";
