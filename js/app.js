@@ -11,14 +11,12 @@ const loadData = () => {
   inputValue.value = " ";
 };
 
-const cardContainer = document.getElementById("card-addon");
-
 const showSearchResults = (meals) => {
-  
-  div.innerHTML = " ";
+  const cardContainer = document.getElementById("card-addon");
   meals.forEach((item) => {
    const div = document.createElement("div");
    div.classList.add("col");
+   div.innerHTML = " ";
     div.innerHTML = `
         <div class="card">
           <img src="${item.strMealThumb}" class="card-img-top w-100" alt="...">
