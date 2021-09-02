@@ -1,6 +1,7 @@
 const spinner = document.getElementById("spinner");
 const loadData = () => {
   const inputValue = document.getElementById("inputValue").value;
+  cardContainer.innerHTML  = " ";
   spinner.removeAttribute("hidden");
   fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`)
     .then((response) => response.json())
@@ -10,10 +11,8 @@ const loadData = () => {
     });
   inputValue.value = " ";
 };
-
+const cardContainer = document.getElementById("card-addon");
 const showSearchResults = (meals) => {
-  const cardContainer = document.getElementById("card-addon");
-  cardContainer.innerHTML = " ";
   meals.forEach((item) => {
    const div = document.createElement("div");
    div.classList.add("col");
