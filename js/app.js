@@ -12,9 +12,10 @@ const loadData = () => {
 };
 
 const cardContainer = document.getElementById("card-addon");
-const div = document.createElement("div");
-div.classList.add("col");
+
 const showSearchResults = (meals) => {
+  const div = document.createElement("div");
+  div.classList.add("col");
   div.innerHTML = " ";
   meals.forEach((item) => {
     div.innerHTML = `
