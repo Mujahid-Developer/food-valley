@@ -13,7 +13,7 @@ const loadData = () => {
 
 const showSearchResults = (meals) => {
   const cardContainer = document.getElementById("card-addon");
-  div.innerHTML = " ";
+  cardContainer.innerHTML = " ";
   meals.forEach((item) => {
    const div = document.createElement("div");
    div.classList.add("col");
