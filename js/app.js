@@ -14,10 +14,11 @@ const loadData = () => {
 const cardContainer = document.getElementById("card-addon");
 
 const showSearchResults = (meals) => {
-  const div = document.createElement("div");
-  div.classList.add("col");
+  
   div.innerHTML = " ";
   meals.forEach((item) => {
+   const div = document.createElement("div");
+   div.classList.add("col");
     div.innerHTML = `
         <div class="card">
           <img src="${item.strMealThumb}" class="card-img-top w-100" alt="...">
